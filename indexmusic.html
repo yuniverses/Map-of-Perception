@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>音樂轉換為3D波動線條模型</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: black;
+        color: aliceblue;
+      }
+      #threejs-container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+      }
+      #controls {
+        margin: 20px;
+      }
+      #recording-status {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="controls">
+      <input type="file" id="audio-file-input" accept="audio/*" />
+      <button id="play-audio">播放音樂</button>
+      <button id="start-recording">開始錄音</button>
+      <button id="stop-recording" disabled>停止錄音</button>
+      <span id="recording-status"></span>
+    </div>
+    <div id="threejs-container"></div>
+    <button id="export-obj">導出OBJ文件</button>
+
+    <!-- 引入 Three.js 和 OrbitControls -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/exporters/OBJExporter.js"></script>
+
+    <!-- 引入您的 JavaScript 文件 -->
+    <script src="music.js"></script>
+  </body>
+</html>

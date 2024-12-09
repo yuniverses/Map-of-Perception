@@ -1,0 +1,21 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#signature-container {
+  margin: 20px auto;
+}
+
+#signature-pad {
+  border: 1px solid #ccc;
+  touch-action: none;
+}
+
+#threejs-container {
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}/*# sourceMappingURL=styles.css.map */

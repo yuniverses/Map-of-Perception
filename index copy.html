@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>影片轉換為3D波動線條模型</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #threejs-container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+      }
+      #controls {
+        margin: 20px;
+      }
+      #colors-container {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .palette-segment {
+        margin-bottom: 20px;
+        width: 80%;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      .palette-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .colors {
+        display: flex;
+        justify-content: center;
+      }
+      .color-box {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>影片轉換為3D波動線條模型</h1>
+    <div id="controls">
+      <input type="file" id="video-file-input" accept="video/*" />
+      <button id="upload-video">上傳並處理影片</button>
+      <button id="play-audio" disabled>播放音樂</button>
+    </div>
+
+    <div id="threejs-container"></div>
+    <button id="export-gltf" disabled>導出GLTF文件</button>
+    <div id="colors-container"></div>
+    <!-- 引入 Three.js -->
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <!-- 引入 OrbitControls -->
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- 引入 GLTFExporter -->
+    <script src="https://unpkg.com/three@0.128.0/examples/js/exporters/GLTFExporter.js"></script>
+
+    <!-- 引入您的 JavaScript 文件 -->
+    <script src="street.js"></script>
+  </body>
+</html>

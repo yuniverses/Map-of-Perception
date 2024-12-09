@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>簽名轉換為3D管道模型</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>簽名轉換為3D管道模型</h1>
+    <div id="signature-container">
+      <canvas id="signature-pad" width="500" height="200"></canvas>
+      <br />
+      <button id="generate-3d">生成3D模型</button>
+      <button id="clear-signature">清除簽名</button>
+    </div>
+    <div id="threejs-container"></div>
+    <button id="export-obj">導出OBJ文件</button>
+
+    <!-- 引入Three.js和相關控制器 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/exporters/OBJExporter.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
